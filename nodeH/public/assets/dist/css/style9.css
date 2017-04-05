@@ -1,0 +1,165 @@
+body, html {
+
+  margin:0px;
+  padding:0px;
+font-family: 'Muli', sans-serif;
+font-size: 14px;
+}
+body
+{
+background-image:    url(../img/bg.jpg);
+  background-repeat:   no-repeat;
+  background-position: top center;
+
+}
+
+.Wrap {
+  position: relative;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto !important;
+
+
+}
+#Header {
+  position: relative;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+margin-top: 15px;
+
+}
+
+#Content {
+  width: 980px;
+  float:left;
+margin-top: 15px;
+margin-bottom: 15px;
+
+}
+
+.Footer {
+  position: relative;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+.clear {
+  clear: both;
+}
+
+.subheading
+{
+color:#820c72;
+font-size: 16px;
+font-weight: 900;
+margin-left: -107px;
+}
+
+.subheading2
+{
+color:#000000;
+font-size: 26px;
+font-weight: 500;
+}
+
+.subheading3
+{
+color:#444444;
+font-size: 21px;
+font-weight: 900;
+}
+
+.subheading4
+{
+color:#444444;
+font-size: 24px;
+font-weight: 600;
+}
+
+
+.badge-container {
+display: flex;
+justify-content: center;
+align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.badge-container .badge {
+  position: relative; }
+
+  .badge-container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0;
+  margin-left: 10px;
+    text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+    .badge-container span strong {
+      display: block;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: -2px;
+
+}
+
+.badge
+{
+  cursor: pointer;
+  /*display: inline-block;
+   min-width: 10px;
+   padding: 3px 7px;
+   font-size: 12px;
+   font-weight: 700;
+   line-height: 1;
+   color: #fff;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: middle;
+   background-color: #777;
+   border-radius: 10px;*/
+}
+
+.image
+{
+
+  -webkit-animation:spin 1.5s linear infinite;
+  -moz-animation:spin 1.5s linear infinite;
+  animation:spin 1.5s linear infinite;
+}
+
+.image:hover
+{
+
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+.phone:hover > .image
+{
+
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+.image2
+{
+
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

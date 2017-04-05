@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="RapidsApp">
+<head>
+  <meta charset="utf-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title >Hunger Hunt</title>
+  <link rel="icon" href="assets/dist/img/tool.png" type="image/png">
+  <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="assets/dist/css/AdminLTE.css">
+  <!-- <link rel="stylesheet" href="   js/SpinnersLoadersLoading-js/dist/loading.min.css"> -->
+
+
+</head>
+
+
+<body   ng-controller="AppController" >
+
+  <div style="background: url('assets/dist/img/banner.jpeg');background-repeat: no-repeat; background-size: cover;height: 549px; ">
+
+      <div class="row">
+        <div class="col-sm-3">
+          <a href="#/landingPage">
+          <img src="assets/dist/img/tool.png" style="height: 70px;margin-left: 89px;margin-top: 22px;"  ></a>
+    </div>
+        <div class="col-sm-3">
+          <a href="#/landingPage">
+      <p style="font-size:20px; margin-top:20px; margin-left: -141px;"><b>H</b>unger <b>H</b>unt </p></a>
+    </div>
+    <div class="col-sm-3">
+
+      </div>
+        <div class="col-sm-3" style=" margin-top: 20px;">
+            <div class="col-sm-3" >
+            <a href="#/landingPage"  style="font-size:17px;float: right;"> <strong>Home </strong></a>
+          </div>
+            <div class="col-sm-3"style="margin-right: 91px;">
+                <a href="#/contact"  style="font-size:17px;float: right;"> <strong>Contact</strong> </a>
+          </div>
+            <div class="col-sm-3">
+                <a href="#/registration"  style="font-size:17px;float: right; margin-right: -202px; margin-top: -24px;"><strong>Login&amp;Signup </strong></a>
+          </div>
+          <div>
+            <li><a href="" data-toggle="modal" data-target="#login-modal" ng-hide="showError1===true">Login</a></li>
+
+
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div ui-view class="fade-in-up" style="height: 100%"> </div>
+
+
+  <div  style="background-color:#e6eeef;">
+    <div class="row">
+      <div class="col-md-4 " style="padding-top: 30px;padding-left: 53px;"> © Copyright 2017 Hunger Hunt | All Rights Reserved
+      </div>
+      <!--col-->
+      <div class="col-md-3 border" style="padding-top:22px;">
+        <h4>Menu
+        </h3>
+        <li>
+          <a href="./views/about_us.html" target="_blank"> About Us
+          </a>
+        </li>
+        <li>
+          <a href="/page-cancellations-and-refunds"> Cancellation and Refunds Policy
+          </a>
+        </li>
+        <li>
+          <a href="/page-terms-amp-conditions" target="_blank"> Terms &amp; Conditions
+          </a>
+        </li>
+        <li>
+          <a href="/page-privacy-policy" target="_blank"> Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="https://form.jotform.me/60817186213454" target="_blank"> Career
+          </a>
+        </li>
+      </div>
+      <!--col-->
+      <div class="col-md-3 border" style="padding-top: 22px;">
+        <h4>Others
+        </h3>
+        <li>
+          <a href="https://goo.gl/forms/DI55R4k5Dchz9k763"> Partner with us
+          </a>
+        </li>
+        <li>
+          <a href="/page-faq-s" target="_blank"> FAQ's
+          </a>
+        </li>
+        <li>
+          <a href="/page-offers" target="_blank"> Offers
+          </a>
+        </li>
+      </div>
+      <!--col-->
+      <div class="col-md-2" style="padding-top:22px;margin-left: -81px;">
+        <h4>Connect with us
+        </h3>
+
+          <div >
+            <a target="_blank" href="https://twitter.com/hungerhunt">
+              <i class="fa fa-twitter" style="font-size:30px;color:#3080e8"></i></a>&nbsp&nbsp
+              <a target="_blank" href="http://www.facebook.com/hungerhunt">
+                <i class="fa fa-facebook-square" style="font-size:30px;color:blue"></i></a>&nbsp&nbsp
+                <a target="_blank" href="https://www.instagram.com/hungerhunt/">
+                  <i class="fa fa-instagram" style="font-size:32px;color:#ef1c4d"></i>
+
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-dismiss="login-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">                      
+        <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4>Login or Register</h4>
+          <div ng-show="showError" class="alert alert-danger" id="alert-msg">
+         {{error.desc}}
+          </div>
+          <form class="aa-login-form" action="">
+            <label for="" >Username<span>*</span></label>
+            <input type="text" placeholder="Username"  ng-model="loginData.username" id="all_text">
+            <label for=""  >Password<span>*</span></label>
+            <input type="password" placeholder="Password" ng-model="loginData.password" id="all_text1">
+            <button class="aa-browse-btn" type="submit" ng-click="login()">Login</button>
+            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
+            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+            <div class="aa-register-now">
+              Don't have an account?<a href="#/registration" onclick="$('#login-modal').modal('hide')">Register now!</a>
+            </div>
+          </form>
+        </div>                        
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div> 
+
+</body>
+
+<!-- jQuery 2.2.3 -->
+<script src="assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<!-- <script src="  js/SpinnersLoadersLoading-js/dist/jquery.loading.min.js"></script> -->
+<!-- <script src="js/text-slider-master/js/text-slider.js"></script> -->
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- <script>
+$.widget.bridge('uibutton', $.ui.button);
+</script> -->
+<!-- Bootstrap 3.3.6 -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+
+
+<!-- jQuery Knob Chart -->
+
+<!-- daterangepicker -->
+<!-- datepicker -->
+
+
+
+
+<!-- <script src="js/config.js" type="text/javascript"></script> -->
+<script src="assets/angular.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+<script src="assets/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="assets/plugins/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="assets/plugins/ocLazyLoad.min.js" type="text/javascript"></script>
+<script src="assets/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+<script src="assets/angular-cookies.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+<!-- Bootstrap WYSIHTML5 -->
+<!-- <script src="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> -->
+<!-- Slimscroll -->
+<!-- <script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script> -->
+<!-- FastClick -->
+<!-- <script src="assets/plugins/fastclick/fastclick.js"></script> -->
+<!-- AdminLTE App -->
+<!-- <script src="assets/dist/js/app.min.js"></script> -->
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="assets/dist/js/demo.js"></script> -->
+
+
+
+</html>

@@ -1,0 +1,66 @@
+<!--Hotels List In Selected City-->
+<div style="background: url('assets/dist/img/bg.jpg');background-repeat: no-repeat; background-size: cover;margin-top: 118px;" 
+      ng-hide="hotel.id==='b1'">
+  <div style="padding-top:28px">
+    <center>
+      <h1 >
+        Welcome in {{selectCity}} <br><br>
+      </h1>
+      <h3>List of Popular Restaurants.....</h3>
+    </center>
+  </div>
+
+  <!--Hotels List -->
+  <div class="row">
+    <div class="col-md-3" ng-repeat="hotel in selectedHotels "  ><button ng-click="findDish(hotel.id)" >
+
+        <div style="height: 450px; border-radius: 5px;float: left;border: 2px solid #ccc;background: rgba(0, 255, 184, 0.3);margin: 10px;">
+            <div style="padding: 20px;">
+                <h4 >{{hotel.name}}</h4>
+                <img src="{{hotel.image}}" width="100%" height="240"/><br>
+                <div style="width: 100%">
+                <p><label>Address:</label> {{hotel.location}}</p>
+                <p><label>Price:</label> {{hotel.price}}</p>
+                </div>
+                <p><label>Description:</label> {{hotel.description}}</p>
+            </div>
+        </div></button>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Dish List In Selected Hotel-->
+<div style="background: url('assets/dist/img/bg.jpg');background-repeat: no-repeat; background-size: cover;margin-top: 118px;"
+  ng-show="hotel.id==='b1'">
+  <div style="padding-top:28px">
+    <center>
+      <h1 >
+        Welcome in {{hotel.name}} <br><br>
+      </h1>
+      <h3>List of Available Dish.....</h3>
+    </center>
+  </div>
+
+  <!--Dish List -->
+  <div class="row">
+    <div class="col-md-3" ng-repeat="dish in selectedDishList "  >
+
+        <div style="height: 450px; border-radius: 5px;float: left;border: 2px solid #ccc;background: rgba(0, 255, 184, 0.3);margin: 10px;">
+            <div style="padding: 20px;">
+                <h4 >{{dish.name}}</h4>
+                <img src="{{dish.dishImage1}}" width="100%" height="240"/><br>
+                 <img src="{{dish.dishImage2}}" width="100%" height="240"/><br>
+                  <img src="{{dish.dishImage3}}" width="100%" height="240"/><br>
+                   <img src="{{dish.dishImage4}}" width="100%" height="240"/><br>
+
+                <div style="width: 100%">
+                <p><label>Price:</label> {{dish.price}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,79 @@
+
+<div style="margin-top: -253px;">
+  <lable ><h1 style="color:#090f3c;
+    font-size: 47px;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;">Hungry? Find Restaurants Near You</h1>
+  </lable><br>
+  </div>
+
+  <div >
+    <center><form id="form_search" name="form_search" method="get" action="" class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+
+          <input type="text" placeholder="Search City" style="width: 311px; font-size: 16px"
+          uib-typeahead="city for city in cities " class="form-control" typeahead-on-select="selectedProd()" ng-model="selectedCity">
+
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="search(selectedCity)">
+              <span class="glyphicon glyphicon-search"></span> Search
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              <i class="fa fa-minus-circle" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </center>
+</div>
+
+<div class="row">
+  <div class="col-md-12"  ng-if="selectedHotels.length>0" data-ng-include="'views/Hotels.html'"> </div>
+</div>
+
+
+<div style="margin-left: 105px;;padding-top: 124px;" ng-hide="selectCity==='Bangalore'||selectCity==='Delhi'||selectCity==='Kolkata'||selectCity==='Chennai'" >
+  <center>
+    <h2 style="margin-left: -122px;">How it works
+    </h2>
+    <p style="margin-left: -134px; padding-bottom: 10px;"><i>Get your favourite food in 4 simple steps</i>
+    </p>
+  </center>
+  <div class="row" style=" padding-bottom: 0px" >
+    <div class="col-md-3 col-sm-3 ">
+      <img src="assets/dist/img/search.png" style="height: 149px;width: 149px;">
+      <h3 style="padding-left:33px">Search
+      </h3>
+      <p style="margin-left: -42px;">Find all restaurants available near you
+      </p>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+      <img src="assets/dist/img/food.png" style="height: 149px;width: 149px;">
+      <h3 style="padding-left:33px; ">Choose
+        <!-- to make square filled border around textin style width: 6em;border: 2px solid green;background:pink;border-radius: 3px;  -->
+      </h3>
+      <p style="margin-left: -76px;">Browse hundreds of menus to find the food you like
+      </p>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+      <img src="assets/dist/img/pay.png" style="height: 149px;width: 149px;">
+      <h3 style="padding-left:55px">Pay
+      </h3>
+      <p>It's quick, secure and easy
+      </p>
+    </div>
+
+    <div class="col-md-3 col-sm-3 ">
+      <img src="assets/dist/img/enjoy12.png" style="height: 149px;width: 149px;">
+      <h3 style="padding-left:48px">Enjoy
+      </h3>
+      <p style="margin-left: -44px;">Food is prepared &amp; delivered to your door
+      </p>
+    </div>
+
+  </div>
+</div>

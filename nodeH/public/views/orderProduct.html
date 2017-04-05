@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="assets/plugins/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+    <div style="background: url('/assets/dist/img/bg.jpg');background-repeat: no-repeat; background-size: cover;">
+      <div style="padding-top:28px">
+        <center><form id="form_search" name="form_search" method="get" action="" class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+
+              <input type="text" placeholder="Search dish" style="width: 311px; font-size: 16px"
+              uib-typeahead="city for city in cities " class="form-control" typeahead-on-select="selectedProd()" ng-model="selected">
+
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="search()">
+                  <span class="glyphicon glyphicon-search"></span> Search
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </center>
+      </div> 
+
+
+
+      <div ><center>
+     <h5>Restaurant Recommended</h5>
+    <span>Best of the best from the restaurant for you</span></center>
+    </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+               
+                <div class="col-md-9">
+                    <div class="col-md-3">
+                        <div style="height: 235px; border-radius: 5px;float: left;border: 2px solid #ccc;background: rgba(0, 255, 184, 0.3);margin: 10px;">
+
+                <div style="padding: 20px;">
+                  
+                    <img src="../assets/dist/img/dish1.jpg" style=" height: 135px; width: 150px; "/><br>
+                    <div style="width: 100%">
+                    
+                      <p >Dish Name</p>
+                    </div>
+                    Price:100 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-minus-circle" aria-hidden="true"></i>0
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    
+
+                </div>
+            </div>
+                    </div>
+                    <div class="col-md-3">
+                         <div style="height: 235px; border-radius: 5px;float: left;border: 2px solid #ccc;background: rgba(0, 255, 184, 0.3);margin: 10px;">
+                <div style="padding: 20px;">
+                  
+                    <img src="../assets/dist/img/dish2.jpg" style=" height: 135px; width: 150px; "/><br>
+                    <div style="width: 100%">
+                    
+                      <p >Dish Name</p>
+                    </div>
+                    Price:200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-minus-circle" aria-hidden="true"></i>0
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    
+                    
+                </div>
+            </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        
+
+                  </div>
+                                    
+                </div>
+
+                    <div class="col-md-3">
+                      <h1>Your Cart</h1>
+                        <div style="min-height: 235px;
+                         padding: 3em;
+                         overflow: hidden;
+                         font-size: 1.2em;
+                         line-height: 1.5;
+                         text-align: center;
+                         color: #d4d4d4; ">
+      
+                        <div class="cart-quotes">
+                          Anything is good if it's made of chocolate.
+                          <span>-Jo Brand</span>
+                        </div>
+           
+                       </div>
+                       Dish Name:<br>
+                       Item Total:<br>
+                       Delivery Charge: 50<br>
+                       Grand Total:<br>
+
+                        <button type="submit" class="btn btn-warning" >Checkout !</button>
+
+
+
+                    </div>
+              </div>
+              
+      </div>
+
+    </div>
+  </div>
+       
+
+
+
+
+ <!-- Cart view section -->
+ <!-- <section id="cart-view">
+ <div style=" background-color: lightblue;">
+ <center> <h2>Cart</h2></center>
+   </div>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="cart-view-area">
+           <div class="cart-view-table">
+             <form action="">
+               <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>&nbsp&nbsp</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <tr ng-repeat="product in cartproduct " ng-init="total();">
+                      
+                        <td><a class="remove" ng-click="removecart($index);mycart()"><fa class="fa fa-close"></fa></a></td>
+                        <td><a href="#"><img src="assets/img/man/polo-shirt-1.png" alt="img"></a></td>
+                        <td><a class="aa-cart-title" >{{product.ProductName}}</a></td>
+                        <td ><a class="aa-cart-title" >${{product.Price}}     
+                        </td>
+
+                        <td><input class="aa-cart-quantity" min=0  type="number" ng-init="productTotal(cartproduct[$index].Quantity,$index);total()" ng-change="productTotal(cartproduct[$index].Quantity,$index);save=1; total()" ng-model="cartproduct[$index].Quantity" ><br>
+                        <a href="" ng-show="save===1" ng-click="updatecart($index)">save</a> </td>
+
+                        <td ><input class="aa-cart-quantity"  ng-init="cartproduct[$index].Total=cartproduct[$index].Quantity*product.Price"  ng-model="cartproduct[$index].Total" style=" width:100px; " disabled></td>
+                      </tr>
+                      </tbody>
+                  </table>
+                </div>
+             </form> -->
+             <!-- Cart Total view
+             <div class="cart-view-total">
+               <h4>Cart Totals</h4>
+               <table class="aa-totals-table">
+                 <tbody>
+                   <tr >
+                     <th>Subtotal</th>
+                     <td ng-model="subtotal" ng-init="subtotal=subtotal">${{subtotal}}</td>
+                   </tr>
+                   <tr>
+                     <th>Tax</th>
+                     <td>$0</td>
+                   </tr>
+                   <tr>
+                     <th>Total</th>
+                    <td ng-model="subtotal" ng-init="subtotal=subtotal">${{subtotal}}</td>
+                   </tr>
+                 </tbody>
+               </table>
+               <a href="#/checkout" class="aa-cart-view-btn" ng-click="">Proceed to Checkout</a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section> -->
+ <!-- / Cart view section -->
+
+
+        
+
+      

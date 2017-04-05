@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body
+{
+
+
+	font-family: 'Muli', sans-serif !important;
+	font-size: 12px;
+	margin: 0px;
+	border: none;
+	background: url(../../img/review/bg.jpg) no-repeat top center;
+
+
+}
+.wrap
+			{
+				margin: auto;
+				width: 980px;
+
+
+			}
+.heading
+{font-size: 21px;
+}
+
+.heading2
+{
+	font-size: 24px;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+	align-items: center;
+
+
+}
+
+.flex-item {
+
+    margin: 10px;
+}
+
+.flex-item span
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-right: auto;
+}
+.header
+{
+	position: relative;
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+	margin-top: 15px;
+
+
+}
+
+
+.header div
+{
+
+
+}
+.bodyctn
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 15px;
+	margin-right: 15px
+}
+
+.clear
+{
+
+	clear: both;
+
+}
+
+.footer
+{
+margin-left: 15px;
+	margin-right: 15px
+}
+.subheading
+{
+	color:#820c72;
+	font-size: 16px;
+	font-weight: 900;
+
+}
+
+.image
+	{margin-left: 15px;
+	margin-right: 0px;
+		cursor: pointer;
+  }
+.image:hover {
+	position: relative;
+	width: 210px;
+    height: 210px;
+
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+
+
+.badge:hover .image{
+	position: relative;
+	width: 210px;
+    height: 210px;
+
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+	.badge-container {
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+  }
+
+  .badge-container .badge {
+    position: relative; }
+
+    .badge-container span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      margin: 0;
+		margin-left: 10px;
+      text-align: center;
+		font-size: 14px;
+		color: #ffffff;
+	}
+
+      .badge-container span strong {
+        display: block;
+		  font-size: 21px;
+		  font-weight: 700;
+		  margin-bottom: -2px;
+
+	}
+
+	.badge
+	{
+		cursor: pointer;
+	}
+	.temp
+	{
+		width: 127px;
+		height: 36px;
+		background: url(../../img/review/temp_bg.png) repeat-x;
+		margin-left: auto;
+		margin-right: 0px;
+		padding-top: 5px;
+		margin-top: 15px;
+		position:relative;
+		text-align:right;
+		vertical-align: middle;
+		color: #ffd200;
+		font-size: 24px;
+	}
+
+
+/* Lightbox background */
+#lightbox {
+  display:none;
+  background: rgba(0,0,0,0.7);
+  position:absolute;
+  top:0px;
+  left:0px;
+  min-width:100%;
+  min-height:100%;
+  z-index:1000;
+}
+/* Lightbox panel with some content */
+#lightbox-panel {
+  display:none;
+  position:fixed;
+  top:115px;
+  left:50%;
+  margin-left:-213px;
+  width:425px;
+  height: 350px;
+  z-index:1001;
+	background: url(../images/fb_bg.png) no-repeat;
+	cursor: pointer;
+
+	-webkit-box-shadow: 6px 6px 58px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 58px -10px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 58px -10px rgba(0,0,0,0.75);
+
+}
+
+#lightbox-panel p {
+	margin-top: -310px;
+	margin-left: 410px;
+}
+.row1{background: url(../../img/review/layer_1.png) repeat-x;
+width: 1020px;
+
+height: 220px;
+margin-top: -60px;
+}
+
+  .row2{background: url(../../img/review/layer_2.png) repeat-x;
+
+width: 1020px;
+height: 190px;}
+
+.row3{background: url(../../img/review/layer_3.png) repeat-x;
+
+width: 1020px;
+height: 260px;}
+.row1, .row2, .row3
+{margin: auto;
+}
+
+.wrap{}
+.row1 .wrap, .row2 .wrap, .row3 .wrap
+{
+  padding-left: 30px;
+  padding-top: 50px;
+  width: 980px;
+}
+
+
+.row3 .wrap
+{padding-top: -20px;}
+
+ul.tab {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width:100%;
+
+
+
+
+}
+
+.Footer {
+  position: relative;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+padding-bottom: 5px;
+  clear: both;
+padding-left: 20px;
+background: url(../../img/review/layer_3.png) repeat-x
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;margin-left:15px;margin-right:15px; border-radius: 5px 5px 0px 0px;background-color: #4d629a; }
+
+/* Style the links inside the list items */
+ul.tab li a {
+  display: inline-block;
+  color: #ffffff;;
+  text-align: center;
+  padding-top:10px;
+  padding-bottom:6px;
+  padding-left:50px;
+  padding-right:50px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 21px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+  background-color: #4d629a;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+  background-color: #f0526e;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 2px 6px;
+  border-top: 3px solid #f0526e;
+width: 90%;
+}
+.frnd_cmd1
+{
+  background: rgba(255,255,255,0.6);
+  height: 30px;
+  width: 350px;
+  padding: 15px;
+  font-size: 14px;
+  border-left: #3b5998 solid thick;
+
+}
+
+.frnd_cmd2
+{
+  background: rgba(255,255,255,0.6);
+  height: 30px;
+  width: 350px;
+  padding: 15px;
+  font-size: 14px;
+  border-left: #f04767 solid thick;
+}
+
+.chg_col
+{
+  color: #f04767;
+  font-weight: 700;
+
+}

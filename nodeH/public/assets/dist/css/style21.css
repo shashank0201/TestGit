@@ -1,0 +1,58 @@
+body, html {
+
+  margin:0px;
+  padding:0px;
+font-family: 'Muli', sans-serif;
+font-size: 14px;
+}
+body
+{
+background-image:    url(../img/bg.jpg);
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: top center!important;
+
+}
+.subheading
+{
+color:#820c72;
+font-size: 16px;
+font-weight: 900;
+
+}
+.Wrap {
+  position: relative;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto !important;
+
+
+}
+#Header {
+
+margin-top: 15px;
+
+}
+
+#Content {
+  width: 1000px;
+  float:left;
+margin-top: 15px;
+margin-bottom: 15px;
+
+}
+
+.Footer {
+  position: relative;
+  width: 1503px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+.clear {
+  clear: both;
+}
